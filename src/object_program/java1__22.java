@@ -16,6 +16,9 @@
   */
 package object_program;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 import treatment_program.java1_22;
 
 class java1__22 {
@@ -29,7 +32,13 @@ class java1__22 {
 		System.out.println(theme.hello + theme.japan);
 		System.out.println(theme.sushi);
 		System.out.println(theme.food);
-		theme.printDatetime();
+		// 現在日時を取得
+		LocalDateTime nowDate = LocalDateTime.now();
+
+		// 表示形式を指定
+		DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss"); // ①
+		String formatNowDate = dtf1.format(nowDate); // ②
+		System.out.println(formatNowDate);
 	}
 
 }
