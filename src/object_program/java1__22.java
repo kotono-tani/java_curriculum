@@ -16,7 +16,7 @@
   */
 package object_program;
 
-import treatment_program.java1_22;
+import treatment_program.java1_22; // 修正
 
 public class java1__22 {
 	public static void main(String[] args) {
