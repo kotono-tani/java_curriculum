@@ -14,7 +14,7 @@
 		・日時は今日の日付を取得してください。
 		
   */
-package object_program;
+package object_program; // 修正
 
 import treatment_program.java1_22; // 修正
 
