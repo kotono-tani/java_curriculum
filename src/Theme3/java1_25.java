@@ -22,16 +22,28 @@
  */
 package Theme3;
 
+import java.util.Scanner;
+
 import Theme3_sub.java1_25_2;
 
 // スーパークラス
 public class java1_25 extends java1_25_2 {
+
 	public static void main(String[] args) {
+
+		// 標準入力を指定
+		Scanner scanner = new Scanner(System.in); // 修正
+
+		System.out.print("名前を入力してください: "); // 修正
+
+		// 1行を読み込んで返却
+		String name = scanner.nextLine(); // 修正
+
 		// インスタンス化
 		java1_25 status = new java1_25();
 
-		// 値代入
-		status.setName("名前");
+		// 値代入	
+		status.setName(name); // 修正
 		status.setHp((int) (Math.random() * 1000) + 1);
 		status.setMp((int) (Math.random() * 1000) + 1);
 		status.setAttack((int) (Math.random() * 1000) + 1);
@@ -49,5 +61,6 @@ public class java1_25 extends java1_25_2 {
 		System.out.println();
 		System.out.println("さあ冒険に出かけよう！");
 
+		scanner.close();
 	}
-}
+} // 修正

@@ -80,7 +80,7 @@ public class java1_25_2 {
 	// getter
 	public int getMp() {
 
-		// hpを返す
+		// mpを返す // 修正
 		return this.mp;
 	}
 
@@ -94,7 +94,7 @@ public class java1_25_2 {
 	// getter
 	public int getAttack() {
 
-		// hpを返す
+		// attackを返す // 修正
 		return this.attack;
 	}
 
@@ -108,7 +108,7 @@ public class java1_25_2 {
 	// getter
 	public int getAgility() {
 
-		// hpを返す
+		// agilityを返す // 修正
 		return this.agility;
 	}
 
@@ -122,7 +122,7 @@ public class java1_25_2 {
 	// getter
 	public int getDefense() {
 
-		// hpを返す
+		// defenseを返す // 修正
 		return this.defense;
 	}
 
