@@ -22,8 +22,8 @@
  */
 package Theme3_sub;
 
-// サブクラス
-public class java1_25_2 {
+// スーパークラス
+public class java1_25_2Super { // 修正
 
 	// コンストラクタを追加
 	// カプセル化
@@ -35,11 +35,11 @@ public class java1_25_2 {
 	private int defense;
 
 	// 生成
-	public java1_25_2() {
+	public java1_25_2Super() { // 修正
 	}
 
-	// 代入 this
-	public java1_25_2(String name, int hp, int mp, int attack, int agility, int defense) {
+	// 代入 this // 修正
+	public java1_25_2Super(String name, int hp, int mp, int attack, int agility, int defense) {
 		this.name = name;
 		this.hp = hp;
 		this.mp = mp;
@@ -132,5 +132,11 @@ public class java1_25_2 {
 		// 参照
 		this.defense = defense;
 	}
+	
+	// 文字列に変換　修正
+		public String toString() {
+			return "HP:" +this.hp+"\nMP:"+this.mp+"\n攻撃力:"+this.attack+"\n素早さ:"+
+		this.agility+"\n防御力:"+this.defense+"\n\nさあ冒険に出かけよう！";
+		}
 
 }

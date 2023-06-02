@@ -24,10 +24,10 @@ package Theme3;
 
 import java.util.Scanner;
 
-import Theme3_sub.java1_25_2;
+import Theme3_sub.java1_25_2Sub;
 
-// スーパークラス
-public class java1_25 extends java1_25_2 {
+
+public class java1_25Main {
 
 	public static void main(String[] args) {
 
@@ -40,7 +40,7 @@ public class java1_25 extends java1_25_2 {
 		String name = scanner.nextLine(); // 修正
 
 		// インスタンス化
-		java1_25 status = new java1_25();
+		java1_25_2Sub status = new java1_25_2Sub();
 
 		// 値代入	
 		status.setName(name); // 修正
@@ -51,15 +51,7 @@ public class java1_25 extends java1_25_2 {
 		status.setDefense((int) (Math.random() * 1000) + 1);
 
 		// 出力
-		System.out.println("こんにちは" + "「" + status.getName() + "」" + " さん");
-		System.out.println("ステータス");
-		System.out.println("HP:" + status.getHp());
-		System.out.println("MP:" + status.getMp());
-		System.out.println("攻撃力:" + status.getAttack());
-		System.out.println("素早さ:" + status.getAgility());
-		System.out.println("防御力:" + status.getDefense());
-		System.out.println();
-		System.out.println("さあ冒険に出かけよう！");
+		System.out.println(status);
 
 		scanner.close();
 	}
