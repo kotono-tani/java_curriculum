@@ -135,8 +135,7 @@ public class java1_25_2Super { // 修正
 	
 	// 文字列に変換　修正
 		public String toString() {
-			return "HP:" +this.hp+"\nMP:"+this.mp+"\n攻撃力:"+this.attack+"\n素早さ:"+
-		this.agility+"\n防御力:"+this.defense+"\n\nさあ冒険に出かけよう！";
-		}
+			return "HP:" +this.hp+"\nMP:"+this.mp+"\n攻撃力:"+this.attack+"\n素早さ:"+this.agility+"\n防御力:"+this.defense+"\n\nさあ冒険に出かけよう！";
+		} // 修正
 
 }
