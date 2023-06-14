@@ -2,11 +2,11 @@ package java1_30;
 
 class Person {
 	// インスタンスフィールドを定義
-	private String name; // name
+	String name; // name
 	private int age; // age
 	private double height; // height
 	private double weight; // weight
-	private static int num; // 合計人数num
+	private static int num; // 合計人数num*/
 
 	// コンストラクタを定義しインスタンスフィールドに値をセット
 	public Person(String name, int age, double height, double weight) { // 修正
@@ -19,6 +19,7 @@ class Person {
 		num++;
 
 	}
+
 
 	public double bmi() { // インスタンスメソッドを定義
 		return weight / (height * height); // 修正 bmi計算
@@ -36,4 +37,16 @@ class Person {
 		System.out.println("合計" + num + "人です"); // 修正
 
 	}
+	// インスタンスメソッドbuyを定義
+	public void buy(Car car) {
+	car.setOwner(this.name);
+	System.out.println(car.getOwner() + "が購入しました");
+	}
+
+	public void buy(Bicycle bicycle) {
+	bicycle.setOwner(this.name);
+	System.out.println(bicycle.getOwner() + "が購入しました");
+	}
+
+
 }
