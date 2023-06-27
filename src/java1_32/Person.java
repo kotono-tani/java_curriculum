@@ -9,7 +9,7 @@ class Person {
 	private double weight;
 
 	// 問題1：クラスフィールド「count」を定義してください（初期値：0,データ型：int）
-	private static int count = 0;
+	private static int count = 0; // 修正
 
 	Person(String name, int age, double height, double weight) {
 
