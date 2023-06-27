@@ -2,14 +2,14 @@ package java1_32;
 
 class Person {
 
-	// クラスフィールド定義
-	public String name;
-	public int age;
-	public double height;
-	public double weight;
+	// クラスフィールド定義 修正
+	private String name;
+	private int age;
+	private double height;
+	private double weight;
 
 	// 問題1：クラスフィールド「count」を定義してください（初期値：0,データ型：int）
-	public int count = 0;
+	public static int count = 0;
 
 	Person(String name, int age, double height, double weight, int count) {
 
@@ -20,22 +20,22 @@ class Person {
 		this.weight = weight;
 
 		// 問題2：Personコンストラクタの中でクラスフィールドcountに1を足してください
-		this.count = count + 1; // 修正
+		Person.count = count + 1; // 修正
 
 	}
 
-	// コンストラクタを定義
+	// ゲッターメソッド　修正
 	public double bmi() {
 		return this.weight / this.height / this.height;
 	}
 
-	// コンストラクタを定義
-	private int age() {
+	// ゲッターメソッド　修正
+	public int age() {
 		return age;
 	}
 
-	// コンストラクタを定義
-	private String name() {
+	// ゲッターメソッド　修正
+	public String name() {
 		return name;
 	}
 
@@ -44,7 +44,7 @@ class Person {
 	public void printCount() {
 
 		// 問題5：クラスメソッドの中にクラスフィールド「count」を用いて「合計〇〇人です」と出力してください
-		System.out.println("合計" + this.count + "人です");
+		System.out.println("合計" + Person.count + "人です"); // 修正
 	}
 
 	// メソッドを定義

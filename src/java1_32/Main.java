@@ -4,7 +4,7 @@ class Main {
 	public static void main(String[] argos) {
 
 		// オブジェクトの生成
-		Person person1 = new Person("鈴木太郎", 20, 1.7, 60, 1);
+		Person person1 = new Person("鈴木太郎", 20, 1.7, 60, 0);
 
 		// メソッドの呼び出し
 		person1.print();
@@ -20,6 +20,6 @@ class Main {
 		person2.print();
 
 		// 問題3：Main.javaで System.out.printlnを使い「合計〇〇人です」と出力してください。〇〇はcountの値です。
-		System.out.println("合計" + person2.count + "人です"); // 修正
+		System.out.println("合計" + Person.count + "人です"); // 修正
 	}
 }
