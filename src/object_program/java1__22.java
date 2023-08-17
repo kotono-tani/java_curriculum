@@ -14,22 +14,17 @@
 		・日時は今日の日付を取得してください。
 		
   */
-package object_program;
+package object_program; // 修正
 
-import treatment_program.java1_22;
+import treatment_program.java1_22; // 修正
 
-class java1__22 {
+public class java1__22 {
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
-
+		
 		// インスタンス化
-		java1_22 theme = new java1_22("こんにちは!", "ここは日本です!", "この寿司はうまい", "寿司は和食です");
-
-		// 出力
-		System.out.println(theme.hello + theme.japan);
-		System.out.println(theme.sushi);
-		System.out.println(theme.food);
-		theme.printDatetime();
+		java1_22 consoleOutput = new java1_22();
+		
+		// 実行
+		consoleOutput.printOutput();
 	}
-
 }

@@ -1,33 +1,51 @@
-package treatment_program;
+package treatment_program; // 修正
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import java.text.SimpleDateFormat; // 修正
+import java.util.Date;
 
 public class java1_22 {
+	// 修正
+	String hello; // こんにちは！
+	String japan; // ここは日本です！
+	String sushi; // この寿司はうまい
+	String food; // 寿司は和食です
 
-	// フィールド変数
-	public String hello;
-	public String japan;
-	public String sushi;
-	public String food;
-
-	// コンストラクタ
-	public java1_22(String hello, String japan, String sushi, String food) {
+	// JapaneseFoodクラスのコンストラクタの呼び出し
+	// 修正
+	java1_22(String hello, String japan, String sushi, String food) {
 		this.hello = hello;
 		this.japan = japan;
 		this.sushi = sushi;
 		this.food = food;
-
 	}
 
-	public void printDatetime() {
-		// 現在日時を取得
-		LocalDateTime nowDate = LocalDateTime.now();
-		// 表示形式を指定
-		DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-		String formatNowDate = dtf1.format(nowDate);
+	public void printOutput() {
+		// TODO 自動生成されたメソッド・スタブ
+		// インスタンスを生成
+		java1_22 them = new java1_22("こんにちは！", "ここは日本です！", "この寿司はうまい", "寿司は和食です");
+		System.out.println(them.hello + them.japan);
+		System.out.println(them.sushi);
+		System.out.println(them.food);
+		System.out.println("今の現在日時は" + currentDateTime + "です");
+	}
 
-		// 出力
-		System.out.println("今の現在日時は" + formatNowDate + "です");
+	// 現在日時を取得
+	private String currentDateTime;
+
+	public java1_22() {
+
+		// 初期値設定
+		setCurrentDateTime();
+	}
+
+	private void setCurrentDateTime() {
+		// 表示形式設定
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+
+		// インスタンス化
+		Date date = new Date();
+
+		// 代入
+		currentDateTime = formatter.format(date);
 	}
 }
